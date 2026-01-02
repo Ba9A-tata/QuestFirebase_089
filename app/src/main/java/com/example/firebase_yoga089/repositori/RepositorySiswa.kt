@@ -1,0 +1,9 @@
+package com.example.firebase_yoga089.repositori
+
+import com.example.firebase_yoga089.modeldata.Siswa
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.tasks.await
+
+interface RepositorySiswa {
+    
+}
