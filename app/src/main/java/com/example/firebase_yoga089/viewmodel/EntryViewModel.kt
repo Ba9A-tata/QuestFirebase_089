@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.example.firebase_yoga089.modeldata.DetailSiswa
 import com.example.firebase_yoga089.modeldata.UIStateSiswa
+import com.example.firebase_yoga089.modeldata.toDataSiswa
 import com.example.firebase_yoga089.repositori.RepositorySiswa
 
 
