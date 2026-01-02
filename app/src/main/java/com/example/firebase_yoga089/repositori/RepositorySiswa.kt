@@ -9,5 +9,8 @@ interface RepositorySiswa {
     suspend fun postDataSiswa(siswa: Siswa)
     suspend fun getSiswaById(id: Long): Siswa
     suspend fun updateSiswa(siswa: Siswa)
+    suspend fun deleteSiswa(siswa: Siswa)
+}
+
 
 }
