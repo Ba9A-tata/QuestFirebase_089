@@ -26,6 +26,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.firebase_yoga089.R
 import com.example.firebase_yoga089.modeldata.DetailSiswa
 import com.example.firebase_yoga089.modeldata.UIStateSiswa
+import com.example.firebase_yoga089.view.route.DestinasiEntry
+import com.example.firebase_yoga089.viewmodel.EntryViewModel
+import com.example.firebase_yoga089.viewmodel.PenyediaViewModel
 
 import kotlinx.coroutines.launch
 
