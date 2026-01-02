@@ -38,6 +38,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.firebase_yoga089.R
 import com.example.firebase_yoga089.modeldata.Siswa
+import com.example.firebase_yoga089.view.route.DestinasiHome
+import com.example.firebase_yoga089.viewmodel.HomeViewModel
+import com.example.firebase_yoga089.viewmodel.PenyediaViewModel
+import com.example.firebase_yoga089.viewmodel.StatusUiSiswa
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -52,7 +56,6 @@ fun HomeScreen(
     Scaffold(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            // Pastikan SiswaTopAppBar sudah dibuat (biasanya custom component)
             SiswaTopAppBar(
                 title = stringResource(DestinasiHome.titleRes),
                 canNavigateBack = false,
@@ -96,9 +99,7 @@ fun HomeBody(
         when (statusUiSiswa) {
             is StatusUiSiswa.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
             is StatusUiSiswa.Success -> DaftarSiswa(
-                // PERBAIKAN 1: Gunakan .siswa (bukan .dataSiswa)
                 itemSiswa = statusUiSiswa.siswa,
-                // PERBAIKAN 2: Tambahkan .toString() karena ID tipe Long
                 onSiswaClick = { onSiswaClick(it.id.toString()) },
                 modifier = modifier.fillMaxWidth()
             )
@@ -113,7 +114,6 @@ fun HomeBody(
 fun LoadingScreen(modifier: Modifier = Modifier) {
     Image(
         modifier = modifier.size(200.dp),
-        // Pastikan ada gambar bernama 'loading_img.png' atau xml di folder drawable
         painter = painterResource(R.drawable.loading_img),
         contentDescription = stringResource(R.string.loading)
     )
@@ -126,15 +126,14 @@ fun ErrorScreen(retryAction: () -> Unit, modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // --- BAGIAN YANG DIUBAH (Hapus Image, Ganti Icon) ---
         androidx.compose.material3.Icon(
             imageVector = androidx.compose.material.icons.Icons.Default.Warning,
             contentDescription = null,
-            modifier = Modifier.size(72.dp) // Biar ikonnya agak besar
+            modifier = Modifier.size(72.dp)
         )
-        // ----------------------------------------------------
 
-        Text(text = stringResource(R.string.loading_failed), modifier = Modifier.padding(16.dp))
+
+        Text(text = stringResource(R.string.loading), modifier = Modifier.padding(16.dp))
         Button(onClick = retryAction) {
             Text(stringResource(R.string.retry))
         }
