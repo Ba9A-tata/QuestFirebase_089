@@ -5,5 +5,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 
 interface RepositorySiswa {
-    
+    suspend fun getDataSiswa(): List<Siswa>
+
 }
