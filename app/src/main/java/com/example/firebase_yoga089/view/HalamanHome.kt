@@ -148,9 +148,9 @@ fun DaftarSiswa(
 ) {
     LazyColumn(
         modifier = modifier,
-        contentPadding = PaddingValues(bottom = 80.dp) // Tambahan padding agar list terbawah tidak tertutup FAB
+        contentPadding = PaddingValues(bottom = 80.dp)
     ) {
-        items(items = itemSiswa, key = { it.id }) { person ->
+        items(items = itemSiswa) { person ->
             ItemSiswa(
                 siswa = person,
                 modifier = Modifier
@@ -198,3 +198,4 @@ fun ItemSiswa(
         }
     }
 }
+
