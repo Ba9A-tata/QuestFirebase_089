@@ -36,7 +36,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.firebase_yoga089.R
 import com.example.firebase_yoga089.modeldata.Siswa
 import com.example.firebase_yoga089.view.route.DestinasiDetail
+import com.example.firebase_yoga089.viewmodel.DetailViewModel
 import com.example.firebase_yoga089.viewmodel.PenyediaViewModel
+import com.example.firebase_yoga089.viewmodel.StatusUIDetail
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
