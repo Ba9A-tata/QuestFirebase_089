@@ -1,0 +1,20 @@
+package com.example.firebase_yoga089.viewmodel
+
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.firebase_yoga089.modeldata.DetailSiswa
+import com.example.firebase_yoga089.modeldata.UIStateSiswa
+import com.example.firebase_yoga089.modeldata.toDataSiswa
+import com.example.firebase_yoga089.repositori.RepositorySiswa
+import com.example.firebase_yoga089.view.route.DestinasiDetail
+import kotlinx.coroutines.launch
+
+class EditViewModel(savedStateHandle: SavedStateHandle, private val repositorySiswa:
+RepositorySiswa
+): ViewModel() {
+
+}
